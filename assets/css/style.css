@@ -1,0 +1,942 @@
+/*********************************************************
+HEADER
+**********************************************************/
+
+/***********************
+BACKGROUND
+***********************/
+.header__background {
+  background: url('../img/background__hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  z-index: -100;
+  width: 100%;
+  height: 100vh;
+}
+
+/***********************
+NAVBAR
+***********************/
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background:rgb(255, 255, 255);
+  box-shadow: 0px 1px 10px #999;
+}
+
+.navbar__logo {
+  width: 72px;
+  height: 20px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.logo {
+  width: 150%;
+}
+
+/***********************
+NAVBAR LINK
+***********************/
+.navbar__container {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.navbar__items {
+  height: 50px;
+  transition: all ease-out 0.2s;
+  cursor: pointer;
+  padding: 0 15px;
+}
+
+.navbar__link {
+  color: #000000;
+  display: block;
+  padding-top: 11px;
+  transition: all ease-out 0.2s;
+}
+
+.navbar__link:hover {
+  color: #39B590;
+}
+
+/*********************************************************
+SECTION HERO
+**********************************************************/
+
+.hero {
+  position: relative;
+  height: calc(100vh - 40px);
+  z-index: 0;
+}
+
+.hero__container {
+  padding: 0 100px;
+  padding-top: calc(50vh - 150px);
+  /*height: 100%;*/
+}
+
+/***********************
+TEXT
+***********************/
+.hero__info {
+  width: 380px;
+  height: 340px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 2px solid black;
+  /*margin-top: calc(50vh - 130px);*/
+  position: relative;
+}
+
+.hero__name {
+  margin-left: 70px;
+  padding-top: 20px;
+  font-size: 70px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  line-height: 0.7;
+  margin-bottom: 40px;
+  color: #000000;
+  width: 200px;
+}
+
+.hero__text {
+  margin-right: 60px;
+  font-size: 16px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  right: 0;
+  color: #0c1f15;
+  line-height: 18px;
+  width: 250px;
+  position: absolute;
+}
+
+/***********************
+CTA
+***********************/
+.cta--hero {
+  position: absolute !important;
+  bottom: 0;
+  left: 104px;
+  padding-bottom: 20px;
+}
+
+.cta {
+  width: 160px;
+  height: 42px;
+  overflow: visible;
+  position: relative;
+  display: flex;
+}
+
+.cta__circle {
+  width: 27px;
+  height: 27px;
+  border-radius: 27px;
+  border: solid 6px #39B590;
+  transition: all ease-in-out 0.2s;
+}
+
+.cta__point {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: #253031;
+  left: 17px;
+  top: 17px;
+  position: absolute;
+}
+
+.cta__text {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  position: absolute;
+  left: 70px;
+  top: 14px;
+  transition: all ease-in-out 0.2s;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.cta:hover>.cta__circle {
+  width: 33px;
+  height: 33px;
+  transform: translate(-3px, -3px);
+}
+
+.cta:hover>.cta__text {
+  color: #253031;
+  transform: translateX(8px);
+}
+
+/*********************************************************
+PRESENTATION
+**********************************************************/
+
+.presentation {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  z-index: 50;
+}
+
+/***********************
+TEXT
+***********************/
+.presentation__containertext {
+  width: 50%;
+  padding: 10% 0;
+}
+
+.presentation__blocktext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 75%;
+  height: 100%;
+}
+
+.blocktext__title {
+  font-size: 30px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #253031;
+}
+
+.line {
+  height: 4px;
+  width: 52px;
+  background: #51CACE;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-left: 50px;
+}
+
+.blocktext__ethymology {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 500;
+  color: #000000;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.blocktext__desc {
+  font-family: 'Rajdhani', sans-serif;
+  line-height: 22px;
+  margin-bottom: 54px;
+  font-size: 15px;
+}
+
+/***********************
+IMAGE
+***********************/
+.presentation__containerbg {
+  width: 50%;
+}
+
+.presentation__blockbg {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/*********************************************************
+WEATHER & NEWS // CONTAINER & BLOCK
+**********************************************************/
+
+.weathernews__container {
+  display: flex;
+  width: 100%;
+  background-color: #f2efea;
+  min-height: 100vh;
+}
+
+.weathernews__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  width: 75%;
+  height: 100%;
+}
+
+/*********************************************************
+WEATHER
+**********************************************************/
+
+/***********************
+BACKGROUND
+***********************/
+.weather__background {
+  width: 50%;
+  background: #f8f8f8;
+  background-size: cover;
+  padding: 100px 0;
+}
+
+/***********************
+TEXT
+***********************/
+.weather__title {
+  font-size: 30px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  color: #253031;
+}
+
+.weather__text {
+  line-height: 22px;
+  font-size: 15px;
+  color: #253031;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 500;
+}
+
+.weather__subtitle {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/***********************
+CARDS
+***********************/
+.weathercards__container {
+  width: 100%;
+  height: 25%;
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.weathercards__block {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  align-items: center;
+}
+
+.weathercards__degree {
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 500;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.weathercards__desc {
+  align-self: center;
+  max-width: 50%;
+  padding: 10%;
+  float: right;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  line-height: 1.3;
+  color: #253031;
+}
+
+/*********************************************************
+NEWS
+**********************************************************/
+.news__block {
+  width: 50%;
+  padding: 100px 0;
+}
+
+/***********************
+TITLE
+***********************/
+.news__title {
+  font-size: 30px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #253031;
+}
+
+/***********************
+CARDS
+***********************/
+.newscards__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.newscards__category {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/***********************
+BACKGROUND
+***********************/
+.newscards__background {
+  width: 40%;
+  height: auto;
+}
+
+/***********************
+TEXT
+***********************/
+.newscards__info {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #253031;
+  padding-bottom: 17px;
+}
+
+.newscards__date {
+  color:rgb(34, 114, 90);
+}
+
+.newscards__title {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #253031;
+}
+
+.newscards__text {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.newscards__desc {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.newscards__link {
+  display: block;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color:rgb(34, 114, 90);
+  bottom: 0px;
+}
+
+/*********************************************************
+LIFESTYLE
+**********************************************************/
+.lifestyle {
+  background-color: #ffffff;
+}
+
+.lifestyle__container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
+}
+
+/***********************
+TITLE
+***********************/
+.lifestyle__title {
+  font-size: 60px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  margin: 77px 0 43px 0;
+  text-align: center;
+}
+
+.lifestyle__line {
+  width: 60px;
+  align-self: center;
+  border-top: 5px solid #51cace;
+  margin-bottom: 47px;
+}
+
+/***********************
+SUBTITLE
+***********************/
+.lifestyle__text {
+  align-self: center;
+  width: 90%;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 17px;
+  line-height: 1.67;
+  text-align: center;
+  color: #253031;
+  margin-bottom: 120px;
+}
+
+/***********************
+CARDS CONTAINER
+***********************/
+.lifestylecards__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.lifestylecards__block {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+/***********************
+IMAGE
+***********************/
+
+.lifestylecards__img {
+  width: 100%;
+}
+
+/***********************
+TEXT
+***********************/
+.lifestylecards__text {
+  margin-top: 50px;
+  align-self: center;
+  width: 95%;
+}
+
+.lifestylecards__title {
+  font-size: 20px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  color: #253031;
+}
+
+.lifestylecards__desc {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 500;
+  margin-top: 30px;
+  line-height: 24px;
+  color: #253031;
+}
+
+/*********************************************************
+COMMENTS
+**********************************************************/
+.comment__title {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  padding: 12px;
+  padding-left: 45px;
+  background-color: #f8f8f8;
+  border-bottom: 5px solid #51cace;
+}
+
+.comment {
+  position: relative;
+  margin-top: 30px;
+  margin-right: 20px;
+  margin-left: 50px;
+}
+
+.comment__avatar {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 70px;
+  height: 70px;
+  background: url("../img/avatar.jpg") no-repeat 50% 50%;
+  border: 2px solid black;
+}
+
+.comment__author {
+  margin-bottom: 5px;
+  padding-left: 45px;
+  padding-right: 20px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  background: #f8f8f8;
+}
+
+.comment__text {
+  font-family: 'Rajdhani', sans-serif;
+  padding: 12px;
+  padding-left: 45px;
+  background-color: #f8f8f8;
+  border-bottom: 5px solid #e5e6e6;
+}
+
+.comment__date {
+  display: block;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #000000;
+}
+
+/*********************************************************
+FOOTER
+**********************************************************/
+
+.footer {
+  background-color: #535758;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.footer__container {
+  transform: translateX(20px);
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  flex-wrap: wrap;
+  width: 70%;
+  justify-content: center;
+}
+
+.footer__block {
+  line-height: 36px;
+  margin-bottom: 20px;
+  width: 220px;
+  flex-grow: 1;
+}
+
+.footer__list {
+  font-family: 'Rajdhani', sans-serif;
+  color: #ffffff;
+}
+
+.footer__copyright {
+  margin: 0 20px;
+  color: #ffffff;
+  margin-top: 180px;
+  text-align: center;
+  font-family: 'Rajdhani', sans-serif;
+
+  line-height: 25px;
+}
+
+.footer__copyright--name {
+  text-decoration: underline;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+/**************************
+MEDIA QUERIES FOR DESKTOP 
+***************************/
+
+@media (max-width: 1366px) {
+  .weathercards__container {
+    height: 30%;
+    flex-direction: column;
+  }
+
+  .weathercards__desc {
+    font-size: 15px;
+  }
+
+  .newscards__background {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+  }
+
+  .newscards__category {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+
+  .newscards__desc {
+    margin: 5px 0;
+  }
+
+  .newscards__text {
+    width: 100%;
+  }
+
+  .lifestyle__container {
+    width: 85%;
+  }
+
+  .footer__copyright {
+    margin-top: 100px;
+  }
+}
+
+/*************************** 
+MEDIA QUERIES FOR TABLET 
+****************************/
+
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 66px;
+  }
+  
+  .navbar__container {
+    display: none;
+  }
+
+  .hero__container {
+    padding: 0 25px;
+    padding-top: calc(50vh - 145px);
+
+  }
+
+  .hero {
+    width: 100%;
+  }
+
+  .presentation {
+    height: auto;
+    background: url('../img/spacefox.png');
+    background-size: cover;
+  }
+
+  .presentation__containertext {
+    width: 100%;
+  }
+
+  .presentation__containerbg {
+    display: none;
+  }
+
+  .blocktext__title,
+  .weather__title,
+  .news__title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+
+  .line {
+    display: block;
+    align-self: center;
+    transform: translateX(-50%);
+    margin-top: 20px;
+  }
+
+  .presentation__blocktext {
+    background: rgba(255, 255, 255, 1);
+    width: 90%;
+  }
+
+  .cta--presentation {
+    margin-bottom: 20px;
+  }
+
+  .weather__background,
+  .news__block {
+    padding: 30px 0;
+  }
+
+  .weathernews__block {
+    width: 90%;
+  }
+
+  .blocktext__ethymology,
+  .blocktext__desc {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .cta--presentation,
+  .cta--weather,
+  .cta--news {
+    align-self: center;
+  }
+
+  .weathernews__container {
+    flex-direction: column;
+  }
+
+  .weather__background {
+    width: 100%;
+  }
+
+  .weather__title,
+  .news__title {
+    margin-bottom: 20px;
+  }
+
+  .weather__subtitle {
+    margin: 30px 0;
+  }
+
+  .weathercards__container {
+    height: 240px;
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+
+  .news__block {
+    width: 100%;
+  }
+
+  .newscards__container {
+    margin-bottom: 40px;
+  }
+
+  .newscards__category {
+    width: 90%;
+  }
+
+  .lifestyle__title {
+    margin-top: 40px;
+  }
+
+  .lifestyle__text {
+    margin-bottom: 50px;
+  }
+
+  .lifestyle__container {
+    width: 95%;
+  }
+
+  .lifestylecards__container {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .lifestylecards__block {
+    width: 90%;
+    align-self: center;
+    margin-bottom: 60px;
+  }
+
+  .lifestylecards__text {
+    margin-top: 20px;
+  }
+
+  .lifestylecards__desc {
+    margin-top: 20px;
+  }
+
+  .footer {
+    padding-top: 50px;
+  }
+
+  .footer__copyright {
+    margin-top: 50px;
+  }
+
+}
+
+/*************************
+MEDIA QUERIES FOR MOBILE 
+**************************/
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 66px;
+  }
+
+  .hero__container {
+    padding: 0 20px;
+    padding-top: calc(50vh - 150px);
+    padding-bottom: calc(-50vh + 150px)
+  }
+
+  .presentation__blocktext {
+    width: 95%;
+  }
+
+  .weathernews__block {
+    width: 95%;
+  }
+
+  .newscards__category {
+    width: 100%;
+  }
+
+  .lifestyle__container {
+    width: 95%;
+  }
+
+  .lifestylecards__block {
+    width: 100%;
+  }
+
+  .hero__info {
+    width: 100%;
+    height: 260px;
+    position: relative;
+  }
+
+  .hero__name {
+    font-size: 60px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    line-height: 0.7;
+    margin-bottom: 40px;
+    color: #253031;
+    width: 200px;
+    margin-left: calc(50% - 100px);
+  }
+
+  .hero__text {
+    font-size: 13px;
+    font-family: 'Rajdhani', sans-serif;
+    right: 0;
+    color: #253031;
+    line-height: 18px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .cta--hero {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 80px);
+  }
+
+  .newscards__date {
+    color:rgb(34, 114, 90);
+  }
+
+  .newscards__link {
+    color:rgb(34, 114, 90);
+  }
+
+  .footer__container {
+    transform: translateX(0px);
+  }
+
+  .footer__block {
+    width: 95%;
+  }
+}
